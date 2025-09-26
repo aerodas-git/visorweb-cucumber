@@ -7,7 +7,7 @@ Scenario Outline: Actualizar Producto
 	Then el aplicativo muestra el mensaje <mensajeEsperado> 
 	
 	Examples: 
-		| usuario | clave | producto          | categoria |precio | mensajeEsperado |
-		|"admin"|"clave"|"Producto actualizado"|"2"|"12.5"|"Se actualizó de manera correcta el Producto"|
-		|"admin"|"clave"|""|"3"|"11.4"|"Nombre: Error de validación: se necesita un valor."|
-		|"admin"|"clave"|"Producto sin precio"|"4"|""|"Precio: Error de validación: se necesita un valor."|
+		| usuario | clave | producto             | categoria |precio | mensajeEsperado                                    |
+		| "admin" |"clave"|"Producto act ejec  3"|"2"        |"12.5" |"Se actualizó de manera correcta el Producto"       |
+		| "admin" |"clave"|""                    |"3"        |"11.4" |"Nombre: Error de validación: se necesita un valor."|
+		| "admin" |"clave"|"Producto sin precio" |"4"        |""     |"Precio: Error de validación: se necesita un valor."|

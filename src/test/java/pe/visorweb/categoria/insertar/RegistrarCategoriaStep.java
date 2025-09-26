@@ -24,6 +24,7 @@ public class RegistrarCategoriaStep {
 	
 	@Before
 	public void configurarDriver() {
+		// se comenta para usar el driver de serenity
 		//driver = VisorDriver.getDriver(Navegador.CHROME);
 		paginaLogin = new PaginaLogin(driver);
 		paginaRegistrarCategoria = new PaginaRegistrarCategoria(driver);

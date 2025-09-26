@@ -13,7 +13,7 @@ import pe.visorweb.driver.VisorDriver;
 import pe.visorweb.driver.VisorDriver.Navegador;
 import pe.visorweb.pagina.login.PaginaLogin;
 import pe.visorweb.pagina.producto.PaginaActualizarProducto;
-import pe.visorweb.pagina.producto.PaginaRegistrarProducto;
+
 
 public class ActualizarProductoStep {
 
