@@ -15,9 +15,9 @@ import io.cucumber.core.options.Constants;
 	@ConfigurationParameter(
 		key = Constants.GLUE_PROPERTY_NAME,
 		value = "pe.visorweb.producto.registrar")
-	//@ConfigurationParameter(
-	//		key = Constants.PLUGIN_PROPERTY_NAME,
-	//		value = "io.cucumber.core.plugin.SerenityReporterParallel,pretty")
+	@ConfigurationParameter(
+			key = Constants.PLUGIN_PROPERTY_NAME,
+			value = "io.cucumber.core.plugin.SerenityReporterParallel,pretty")
 	public class RegistrarProductoTest {
 		
 	}

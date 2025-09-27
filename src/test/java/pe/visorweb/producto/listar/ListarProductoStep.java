@@ -1,4 +1,4 @@
-package pe.visorweb.producto.registrar;
+package pe.visorweb.producto.listar;
 
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.WebDriver;
@@ -13,22 +13,21 @@ import net.serenitybdd.annotations.Managed;
 import pe.visorweb.driver.VisorDriver;
 import pe.visorweb.driver.VisorDriver.Navegador;
 import pe.visorweb.pagina.login.PaginaLogin;
-import pe.visorweb.pagina.producto.PaginaRegistrarProducto;
+import pe.visorweb.pagina.producto.PaginaListarProducto;
 
-public class RegistrarProductoStep {
+public class ListarProductoStep {
 
-	
 	@Managed
 	WebDriver driver;
 	PaginaLogin paginaLogin;
-	PaginaRegistrarProducto paginaRegistrarProducto;
+	PaginaListarProducto paginaListarProducto;
 	
 	@Before
 	public void configurarDriver() {
 		//comentar driver para Serenity
 		//driver = VisorDriver.getDriver(Navegador.CHROME);
 		paginaLogin = new PaginaLogin(driver);
-		paginaRegistrarProducto = new PaginaRegistrarProducto(driver);
+		paginaListarProducto = new 	PaginaListarProducto(driver);
 	}
 	
 	@After
@@ -46,21 +45,22 @@ public class RegistrarProductoStep {
 		paginaLogin.iniciarSesion(usuario, clave);	
 	}
 	
-	@When("cargo la pagina registrar producto")
-	public void cargarPaginaRergistrarProducto() {
-		paginaRegistrarProducto.cargarPagina();
+	@When("cargar la pagina listar producto")
+	public void cargarPaginaListarProducto() {
+		paginaListarProducto.cargarPagina();
 	}
 	
-	@And("registro el producto {string} categoria {string} y precio {string}")
-	public void registrarProducto(String producto, String categoria, String precio) {
-		paginaRegistrarProducto.guardar(producto, categoria, precio);
+	@And("listar con el filtro {string}")
+	public void listarProducto(String filtro) {
+		paginaListarProducto.listar(filtro);
 	}
 	
 	@Then("el aplicativo muestra el mensaje {string}")
 	public void verificarRegistro(String mensajeEsperado) {
 		Assertions
-			.assertThat(paginaRegistrarProducto.getMensaje())
+			.assertThat(paginaListarProducto.getMensaje())
 			.isEqualTo(mensajeEsperado);
 	}
+	
 	
 }

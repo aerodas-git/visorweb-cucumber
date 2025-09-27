@@ -7,15 +7,15 @@ import org.junit.platform.suite.api.Suite;
 
 import io.cucumber.core.options.Constants;
 
-@Suite
-@IncludeEngines("cucumber")
-@SelectClasspathResource("features/producto/eliminar")
-@ConfigurationParameter(
-	key = Constants.GLUE_PROPERTY_NAME,
-	value = "pe.visorweb.producto.eliminar")
-//@ConfigurationParameter(
-//		key = Constants.PLUGIN_PROPERTY_NAME,
-//		value = "io.cucumber.core.plugin.SerenityReporterParallel,pretty")
-public class EliminarProductoTest {
-
-}
+	@Suite
+	@IncludeEngines("cucumber")
+	@SelectClasspathResource("features/producto/eliminar")
+	@ConfigurationParameter(
+		key = Constants.GLUE_PROPERTY_NAME,
+		value = "pe.visorweb.producto.eliminar")
+	@ConfigurationParameter(
+			key = Constants.PLUGIN_PROPERTY_NAME,
+			value = "io.cucumber.core.plugin.SerenityReporterParallel,pretty")
+	public class EliminarProductoTest {
+	
+	}

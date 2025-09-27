@@ -9,6 +9,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.annotations.Managed;
 import pe.visorweb.driver.VisorDriver;
 import pe.visorweb.driver.VisorDriver.Navegador;
 import pe.visorweb.pagina.login.PaginaLogin;
@@ -18,7 +19,7 @@ import pe.visorweb.pagina.producto.PaginaActualizarProducto;
 public class ActualizarProductoStep {
 
 	
-	//@Managed
+		@Managed
 		WebDriver driver;
 		PaginaLogin paginaLogin;
 		PaginaActualizarProducto paginaActualizarProducto;
@@ -26,7 +27,7 @@ public class ActualizarProductoStep {
 		@Before
 		public void configurarDriver() {
 			//comentar driver para Serenity
-			driver = VisorDriver.getDriver(Navegador.CHROME);
+			//driver = VisorDriver.getDriver(Navegador.CHROME);
 			paginaLogin = new PaginaLogin(driver);
 			paginaActualizarProducto = new PaginaActualizarProducto(driver);
 		}
