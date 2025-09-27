@@ -10,8 +10,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Managed;
-import pe.visorweb.driver.VisorDriver;
-import pe.visorweb.driver.VisorDriver.Navegador;
+//import pe.visorweb.driver.VisorDriver;
+//import pe.visorweb.driver.VisorDriver.Navegador;
 import pe.visorweb.pagina.login.PaginaLogin;
 import pe.visorweb.pagina.producto.PaginaActualizarProducto;
 
